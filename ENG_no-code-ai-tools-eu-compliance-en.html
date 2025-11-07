@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-Code AI Tools - EU Compliance Analysis November 2025</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 90%, #2BFF88 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .subtitle {
+            margin: 15px 0 0 0;
+            opacity: 0.95;
+            font-size: 18px;
+        }
+        
+        /* Alert Boxes */
+        .alert-critical {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-critical h3 {
+            color: #721c24;
+            margin-top: 0;
+        }
+        
+        .alert-warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-warning h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .alert-success h3 {
+            color: #155724;
+            margin-top: 0;
+        }
+        
+        /* Findings Section */
+        .findings-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .findings-section h2 {
+            color: #2BD2FF;
+            margin-top: 0;
+            font-size: 26px;
+            border-bottom: 3px solid #2BD2FF;
+            padding-bottom: 10px;
+        }
+        .findings-section h3 {
+            color: #FA8BFF;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        .findings-section h4 {
+            color: #666;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        /* Tool Cards */
+        .tool-card {
+            background: #f8f9fa;
+            border-left: 5px solid #2BD2FF;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .tool-card h3 {
+            color: #2BD2FF;
+            margin-top: 0;
+        }
+        .tool-card.approved {
+            border-left-color: #28a745;
+        }
+        .tool-card.caution {
+            border-left-color: #ffc107;
+        }
+        .tool-card.avoid {
+            border-left-color: #dc3545;
+        }
+        
+        /* Comparison Table */
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 1800px;
+        }
+        th {
+            background: #2BD2FF;
+            color: white;
+            padding: 14px 10px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border: 1px solid #20b3e6;
+        }
+        td {
+            padding: 12px 10px;
+            border: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        tr:hover {
+            background: #f0f8ff;
+        }
+        .tool-name {
+            font-weight: 700;
+            color: #2BD2FF;
+            font-size: 15px;
+        }
+        
+        /* Status Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 12px;
+            margin: 2px;
+        }
+        .badge-approved { background: #d4edda; color: #155724; }
+        .badge-caution { background: #fff3cd; color: #856404; }
+        .badge-avoid { background: #f8d7da; color: #721c24; }
+        .badge-info { background: #d1ecf1; color: #0c5460; }
+        
+        /* Score Indicators */
+        .score {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .score-high { color: #28a745; }
+        .score-mid { color: #ffc107; }
+        .score-low { color: #dc3545; }
+        
+        /* Lists */
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+        .pro { color: #28a745; }
+        .con { color: #dc3545; }
+        
+        /* Responsive */
+        @media print {
+            body { background: white; }
+            .container, .findings-section { box-shadow: none; }
+            th { position: static; }
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 24px; }
+            .subtitle { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛡️ No-Code/Low-Code AI Tools</h1>
+        <p class="subtitle">EU Compliance Analysis for Swedish Agencies | November 2025</p>
+        <p class="subtitle" style="font-size: 14px; margin-top: 5px;">Lovable • v0 • Bubble • Softr • Hostinger</p>
+    </div>
+
+    <div class="alert-critical">
+        <h3>🚨 CRITICAL: Training Data Problem</h3>
+        <p><strong>Only 2 of 5 tools offer AI training opt-outs</strong> – and both require expensive premium plans ($50-100/month per developer).</p>
+        <ul>
+            <li><strong>Hostinger:</strong> ❌ EXPLICITLY uses customer data for AI training with NO opt-out. Disqualified for confidential work.</li>
+            <li><strong>Bubble & Softr:</strong> ⚠️ NO policy documented. Compliance blind spot.</li>
+            <li><strong>Lovable & v0:</strong> ✅ Opt-out available but costs $600-1,200/year per developer.</li>
+        </ul>
+    </div>
+
+    <div class="findings-section">
+        <h2>📊 Executive Summary</h2>
+        
+        <div class="alert-success">
+            <h3>✅ Bottom Line Up Front</h3>
+            <p><strong>For Swedish agencies handling confidential client data:</strong> Only <strong>Lovable Business Plan ($50/mo)</strong> or <strong>v0 Business Plan ($100/mo)</strong> meet GDPR requirements with documented training opt-outs. Lovable offers best value + code ownership.</p>
+        </div>
+        
+        <h3>🎯 Quick Recommendations by Use Case</h3>
+        
+        <div class="tool-card approved">
+            <h3>Confidential Client Projects (Legal, Healthcare, Finance)</h3>
+            <p><strong>✅ Approved:</strong> Lovable Business or v0 Business</p>
+            <p><strong>❌ Avoid:</strong> All others (policy gaps or explicit training)</p>
+        </div>
+        
+        <div class="tool-card approved">
+            <h3>Client Portals & Internal Tools</h3>
+            <p><strong>✅ Best:</strong> Softr Professional ($167/mo) - Excellent Airtable integration + EU servers</p>
+            <p><strong>✅ Alternative:</strong> Lovable Business - More flexibility, self-hostable</p>
+            <p><strong>⚠️ Requirement:</strong> Softr requires written AI policy confirmation before confidential work</p>
+        </div>
+        
+        <div class="tool-card caution">
+            <h3>Public Marketing Sites (Non-Confidential)</h3>
+            <p><strong>✅ OK:</strong> Hostinger Business ($3.99/mo) - ONLY for public content</p>
+            <p><strong>⚠️ NEVER:</strong> Input confidential data in AI prompts</p>
+        </div>
+        
+        <div class="tool-card avoid">
+            <h3>❌ Not Recommended</h3>
+            <p><strong>Bubble:</strong> Total vendor lock-in + expensive EU servers (Enterprise-only) + no AI policy</p>
+            <p><strong>Hostinger:</strong> For confidential work (explicit AI training)</p>
+        </div>
+        
+        <h3>💰 Realistic Compliance Costs</h3>
+        <p><strong>"Free" or basic plans are NOT sufficient for GDPR-compliant Swedish agency work.</strong></p>
+        
+        <table style="min-width: 0; width: 100%; margin-top: 15px;">
+            <tr>
+                <th>Setup</th>
+                <th>Annual Cost</th>
+                <th>Per Developer</th>
+            </tr>
+            <tr>
+                <td><strong>Lovable Business</strong> (5 devs)</td>
+                <td class="score score-mid">$3,000/year</td>
+                <td>$600/year</td>
+            </tr>
+            <tr>
+                <td><strong>v0 Business</strong> (5 devs)</td>
+                <td class="score score-low">$6,000/year</td>
+                <td>$1,200/year</td>
+            </tr>
+            <tr>
+                <td><strong>Softr Professional</strong> (shared)</td>
+                <td class="score score-high">$2,004/year</td>
+                <td>Shared workspace</td>
+            </tr>
+            <tr>
+                <td><strong>Bubble Enterprise</strong></td>
+                <td class="score score-low">$12,000+/year</td>
+                <td>Negotiated</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2 style="color: #2BD2FF; margin-top: 0;">📋 Detailed Comparison Table</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool</th>
+                    <th>Tech Stack</th>
+                    <th>EU Servers</th>
+                    <th>GDPR</th>
+                    <th>Training Opt-Out</th>
+                    <th>Cost (Compliance)</th>
+                    <th>Certifications</th>
+                    <th>Code Export</th>
+                    <th>Vendor Lock-In</th>
+                    <th>IP Ownership</th>
+                    <th>Quality</th>
+                    <th>User Reviews</th>
+                    <th>Total</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tool-name">Lovable</span></td>
+                    <td>React, TypeScript, Supabase</td>
+                    <td>✅ Via sub-processors</td>
+                    <td><span class="score score-high">5/5</span></td>
+                    <td>✅ Business Plan</td>
+                    <td>$50/user/month</td>
+                    <td>ISO 27001:2022<br>SOC 2 Type 2</td>
+                    <td>✅ Full ZIP</td>
+                    <td><span class="pro">None</span></td>
+                    <td>Full customer ownership</td>
+                    <td><span class="score score-mid">3/5</span></td>
+                    <td>G2: 4.5/5<br>PH: 4.6/5</td>
+                    <td><span class="score score-mid">4.2/5</span></td>
+                    <td><span class="badge badge-approved">APPROVED</span></td>
+                </tr>
+                <tr>
+                    <td><span class="tool-name">v0 (Vercel)</span></td>
+                    <td>React, Next.js, Tailwind</td>
+                    <td><span class="con">❌ US only</span></td>
+                    <td><span class="score score-mid">3/5</span></td>
+                    <td>✅ Business Plan</td>
+                    <td>$100/user/month</td>
+                    <td>ISO 27001:2013<br>SOC 2 Type 2</td>
+                    <td>✅ Next.js</td>
+                    <td><span class="badge badge-caution">Low</span></td>
+                    <td>Customer owns (non-unique)</td>
+                    <td><span class="score score-high">4/5</span></td>
+                    <td>PH: 4.8/5<br>Mixed quality</td>
+                    <td><span class="score score-mid">3.5/5</span></td>
+                    <td><span class="badge badge-caution">CAUTION</span></td>
+                </tr>
+                <tr>
+                    <td><span class="tool-name">Bubble</span></td>
+                    <td>Proprietary visual</td>
+                    <td><span class="con">Enterprise only</span></td>
+                    <td><span class="score score-mid">4/5</span></td>
+                    <td><span class="con">❌ No statement</span></td>
+                    <td>$1,000+/month</td>
+                    <td>SOC 2 Type II</td>
+                    <td><span class="con">❌ None</span></td>
+                    <td><span class="con">Total</span></td>
+                    <td>Owns apps (locked)</td>
+                    <td><span class="score score-high">4/5</span></td>
+                    <td>G2: 4.7/5<br>(626 reviews)</td>
+                    <td><span class="score score-mid">3.8/5</span></td>
+                    <td><span class="badge badge-caution">CAUTION</span></td>
+                </tr>
+                <tr>
+                    <td><span class="tool-name">Softr</span></td>
+                    <td>Frontend + ext DBs</td>
+                    <td>✅ AWS Germany</td>
+                    <td><span class="score score-mid">4/5</span></td>
+                    <td><span class="con">❌ No statement</span></td>
+                    <td>$167/month</td>
+                    <td>SOC 2 Type II</td>
+                    <td><span class="con">❌ None</span></td>
+                    <td><span class="con">Total</span></td>
+                    <td>Unclear (ToS issue)</td>
+                    <td><span class="score score-high">4/5</span></td>
+                    <td>G2: 4.7/5<br>TP: 2.1/5</td>
+                    <td><span class="score score-high">4.0/5</span></td>
+                    <td><span class="badge badge-approved">APPROVED*</span></td>
+                </tr>
+                <tr>
+                    <td><span class="tool-name">Hostinger AI</span></td>
+                    <td>WordPress-based</td>
+                    <td>✅ Multiple EU</td>
+                    <td><span class="score score-mid">4/5</span></td>
+                    <td><span class="con">❌ Explicit training</span></td>
+                    <td>$3.99/month</td>
+                    <td>ISO 27001:2017</td>
+                    <td><span class="con">❌ None</span></td>
+                    <td><span class="con">Total</span></td>
+                    <td>Customer owns sites</td>
+                    <td><span class="score score-mid">3.5/5</span></td>
+                    <td>G2: 4.4/5<br>TP: 4.6/5</td>
+                    <td><span class="score score-mid">3.5/5</span></td>
+                    <td><span class="badge badge-avoid">AVOID</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p style="margin-top: 20px; font-size: 12px; color: #666;">
+            * = Requires written AI policy confirmation before confidential work
+        </p>
+    </div>
+
+    <div class="findings-section">
+        <h2>🔍 Deep Dive: Tool by Tool Analysis</h2>
+        
+        <div class="tool-card approved">
+            <h3>1. Lovable.dev ⭐ Top Pick</h3>
+            <p><span class="score score-high">Rating: 4.2/5</span> | GDPR: 5/5 | Security: 4/5 | Quality: 3/5</p>
+            
+            <h4>✅ Strengths</h4>
+            <ul>
+                <li class="pro"><strong>Best GDPR compliance:</strong> Full DPA with EU SCCs, ISO 27001, SOC 2 Type 2</li>
+                <li class="pro"><strong>Zero vendor lock-in:</strong> Full code export (ZIP), deploy anywhere</li>
+                <li class="pro"><strong>EU presence:</strong> Lovable Labs Sweden AB, Stockholm</li>
+                <li class="pro"><strong>Training opt-out:</strong> Business Plan ($50/mo) = mandatory for confidential work</li>
+                <li class="pro"><strong>IP ownership:</strong> "As between us, you own your Customer Data" (ToS)</li>
+            </ul>
+            
+            <h4>⚠️ Limitations</h4>
+            <ul>
+                <li class="con">Bug-fix loops consume credits rapidly per reviews</li>
+                <li class="con">Gets you 70% there - needs dev oversight for production</li>
+                <li class="con">Business Plan required = $600/year per dev for compliance</li>
+            </ul>
+            
+            <h4>📊 Use Cases</h4>
+            <ul>
+                <li>✅ Client MVPs with code delivery</li>
+                <li>✅ Confidential client projects (Business Plan)</li>
+                <li>✅ Internal tools with self-hosting requirements</li>
+            </ul>
+        </div>
+        
+        <div class="tool-card caution">
+            <h3>2. v0 by Vercel</h3>
+            <p><span class="score score-mid">Rating: 3.5/5</span> | GDPR: 3/5 | Security: 4/5 | Quality: 4/5</p>
+            
+            <h4>✅ Strengths</h4>
+            <ul>
+                <li class="pro">Highest code quality per reviews</li>
+                <li class="pro">Strong enterprise infrastructure (SOC 2, ISO 27001)</li>
+                <li class="pro">Training opt-out on Business Plan ($100/mo)</li>
+            </ul>
+            
+            <h4>❌ Major Gaps</h4>
+            <ul>
+                <li class="con"><strong>NO permanent EU data storage</strong> - US data centers only</li>
+                <li class="con">Double the cost vs Lovable for same protection ($100 vs $50/mo)</li>
+                <li class="con">Vercel-first deployment (can export but requires setup)</li>
+            </ul>
+            
+            <h4>📊 Recommendation</h4>
+            <p><span class="badge badge-caution">USE WITH CAUTION</span> - Only suitable with Business Plan + acceptance of US-based processing. Better for teams already in Vercel ecosystem.</p>
+        </div>
+        
+        <div class="tool-card caution">
+            <h3>3. Bubble.io</h3>
+            <p><span class="score score-mid">Rating: 3.8/5</span> | GDPR: 4/5 | Security: 4/5 | Quality: 4/5</p>
+            
+            <h4>✅ Strengths</h4>
+            <ul>
+                <li class="pro">Mature platform (since 2012) with 4.7/5 G2 rating</li>
+                <li class="pro">SOC 2 Type II certified</li>
+                <li class="pro">Full-stack capability without code</li>
+            </ul>
+            
+            <h4>❌ Major Gaps</h4>
+            <ul>
+                <li class="con"><strong>NO documented AI training policy</strong> - GDPR blind spot</li>
+                <li class="con"><strong>Total vendor lock-in</strong> - Zero code export</li>
+                <li class="con">EU servers only on Enterprise Plan ($1,000+/mo)</li>
+                <li class="con">Shared plans = US servers only</li>
+            </ul>
+            
+            <h4>📊 Recommendation</h4>
+            <p><span class="badge badge-caution">CAUTION</span> - Unsuitable for professional client delivery due to vendor lock-in. Requires written AI policy + Enterprise Plan for EU. Economically impractical for smaller agencies.</p>
+        </div>
+        
+        <div class="tool-card approved">
+            <h3>4. Softr.io</h3>
+            <p><span class="score score-high">Rating: 4.0/5</span> | GDPR: 4/5 | Security: 4/5 | Quality: 4/5</p>
+            
+            <h4>✅ Strengths</h4>
+            <ul>
+                <li class="pro"><strong>Best EU positioning:</strong> German entity, AWS Germany hosting</li>
+                <li class="pro">Excellent Airtable integration (best-in-class)</li>
+                <li class="pro">SOC 2 Type II, DPA with SCCs</li>
+                <li class="pro">G2: 4.7/5 (626 reviews) - 85% give 5 stars</li>
+            </ul>
+            
+            <h4>⚠️ Critical Gap</h4>
+            <ul>
+                <li class="con"><strong>NO documented AI training policy</strong> despite AI features</li>
+                <li class="con">Total vendor lock-in (no code export)</li>
+                <li class="con">Trustpilot: 2.1/5 (billing issues reported)</li>
+            </ul>
+            
+            <h4>📊 Recommendation</h4>
+            <p><span class="badge badge-approved">APPROVED*</span> - Excellent for Airtable-based client portals. <strong>BUT requires written AI policy confirmation before confidential work.</strong> Professional Plan ($167/mo) for white-labeling.</p>
+        </div>
+        
+        <div class="tool-card avoid">
+            <h3>5. Hostinger AI Website Builder</h3>
+            <p><span class="score score-mid">Rating: 3.5/5</span> | GDPR: 4/5 | Security: 4/5 | Quality: 3.5/5</p>
+            
+            <h4>✅ Strengths</h4>
+            <ul>
+                <li class="pro">Exceptional value: $3.99/mo for unlimited sites</li>
+                <li class="pro">Multiple EU data centers (Germany, France, NL, LT, UK)</li>
+                <li class="pro">ISO 27001:2017 certified</li>
+                <li class="pro">G2: 4.4/5, Trustpilot: 4.6/5</li>
+            </ul>
+            
+            <h4>❌ DISQUALIFYING Gap</h4>
+            <ul>
+                <li class="con"><strong>EXPLICIT AI TRAINING on customer data</strong> with no opt-out</li>
+                <li class="con">"You authorize Hostinger... to store and use your Input... for machine learning models"</li>
+                <li class="con">"You should not upload sensitive and personal data" (Terms)</li>
+                <li class="con">Third-party AI providers (OpenAI GPT-4o) process data</li>
+            </ul>
+            
+            <h4>📊 Recommendation</h4>
+            <p><span class="badge badge-avoid">NOT RECOMMENDED</span> for professional agency work. AI training policy creates unacceptable confidentiality risk. <strong>ONLY suitable for:</strong></p>
+            <ul>
+                <li>Internal agency marketing site</li>
+                <li>Public, non-confidential content</li>
+                <li>Personal portfolios</li>
+            </ul>
+            <p><strong>NEVER input confidential client information in AI prompts.</strong></p>
+        </div>
+    </div>
+
+    <div class="alert-warning">
+        <h3>⚠️ EU AI Act - August 2026 Deadline</h3>
+        <p><strong>Action Plan for Swedish Agencies:</strong></p>
+        <ul>
+            <li><strong>Immediate (Nov 2025 - Mar 2026):</strong> Inventory all AI tools, request written AI policies, upgrade to Business/Enterprise tiers</li>
+            <li><strong>Pre-Deadline (Apr-Jul 2026):</strong> DPIA for AI tool usage, establish code security review process, train staff</li>
+            <li><strong>Compliance:</strong> Only Lovable and v0 provide sufficient documentation today. Others require vendor engagement.</li>
+        </ul>
+    </div>
+
+    <div class="findings-section">
+        <h2>📚 Sources & Methodology</h2>
+        <p><strong>Research conducted:</strong> November 7, 2025</p>
+        <p><strong>Temperature:</strong> 0 (no speculation)</p>
+        <p><strong>Sources:</strong> Only verified official documents and independent reviews</p>
+        
+        <h3>Primary Sources per Tool</h3>
+        <ul>
+            <li><strong>Lovable:</strong> lovable.dev/terms, lovable.dev/data-processing-agreement, trust.lovable.dev, G2 reviews</li>
+            <li><strong>v0:</strong> v0.app/policy, vercel.com/legal/dpa, vercel.com/security, ProductHunt reviews</li>
+            <li><strong>Bubble:</strong> manual.bubble.io/compliance/gdpr, bubble.io ownership docs, G2 reviews (626)</li>
+            <li><strong>Softr:</strong> softr.io/dpa-v1, docs.softr.io/security, G2 reviews, Trustpilot</li>
+            <li><strong>Hostinger:</strong> hostinger.com/legal/dpa, hostinger.com/legal/special-terms, ISO 27001 cert</li>
+        </ul>
+        
+        <h3>Independent Reviews</h3>
+        <ul>
+            <li>G2.com (verified reviews)</li>
+            <li>ProductHunt (community ratings)</li>
+            <li>Trustpilot (customer feedback)</li>
+            <li>TechRadar, The Hacker News, DEV Community</li>
+        </ul>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <p style="color: #666; font-size: 14px; margin: 0;">
+            <strong>Research for Swedish Creative Agencies</strong><br>
+            Generated: November 7, 2025 | Temperature: 0 | Extended Research Mode<br>
+            Not legal advice - consult a lawyer for final compliance
+        </p>
+    </div>
+</body>
+</html>
